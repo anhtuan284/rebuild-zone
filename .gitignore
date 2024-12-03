@@ -1,0 +1,36 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+
+# Django migrations
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Environment variables
+.env
+
+# Database files
+db.sqlite3
+
+# Static files
+/static/
+media/
+
+# IDE files
+.vscode/
+.idea/
+
+# Python virtual environment
+venv/
+env/
+ENV/
+
+# Log files
+*.log
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
