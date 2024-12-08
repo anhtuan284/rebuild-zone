@@ -43,6 +43,39 @@ Link thuyết trình Canva tại cuộc thi [link]()
 
 ### Cài đặt
 
+### Bước 1: Cài đặt Docker
+
+1. **Cài đặt Docker**:
+   - Truy cập vào trang chính thức của Docker để tải và cài đặt Docker: [Docker Get Started](https://docs.docker.com/get-docker/).
+   - Sau khi cài đặt, xác nhận Docker đã được cài đặt thành công bằng cách mở terminal và chạy lệnh:
+     ```bash
+     docker --version
+     ```
+   - Bạn cũng có thể kiểm tra trạng thái Docker daemon với:
+     ```bash
+     docker info
+     ```
+
+2. **Cài đặt Docker Compose (Tùy chọn)**:
+   - Nếu bạn muốn sử dụng Docker Compose (để chạy Budibase cùng với MongoDB, ví dụ), bạn có thể tải Docker Compose từ [Docker Compose Documentation](https://docs.docker.com/compose/install/).
+   - Sau khi cài đặt Docker Compose, kiểm tra lại phiên bản:
+     ```bash
+     docker-compose --version
+     ```
+
+### Bước 2: Chạy Budibase trong Docker
+Lệnh này sẽ khởi động cả Budibase và MongoDB trong hai container riêng biệt. Bạn có thể truy cập Budibase qua http://localhost:10000.
+
+```bash
+docker-compose up -d
+```
+### Bước 3: Tạo tài khoản đăng nhập
+![image](docs/images/images1.png)
+### Bước 4: Tạo app mặc định
+![image](docs/images/images2.png)
+### Bước 5: Thêm app mà bạn đã tải về
+![image](docs/images/images3.png)
+Sau khi import xong thì vào tab ẩn danh và điền url http://localhost:10000/builder/portal/{ten-app} để trải nghiệm 
 ## Tích hợp và triển khai liên tục
 
 
