@@ -5,8 +5,8 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-COPY /imageutil .
-COPY /models /models
+COPY imageutil/ imageutil/
+COPY models/ models/
 COPY app.py app.py
 
 ENV FLASK_APP=app.py
