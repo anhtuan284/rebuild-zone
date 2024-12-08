@@ -6,16 +6,14 @@ import cloudinary.uploader
 import imageutil
 import sentry_sdk
 
-from sympy.printing.tensorflow import tensorflow
+import tensorflow
 from dotenv import load_dotenv
 
 from flask_cors import CORS
 from flask import Flask, request, send_file, jsonify
-from ultralytics import YOLO
 from PIL import Image
 
 load_dotenv()
-
 # Configure Cloudinary
 cloudinary.config(
     cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
@@ -40,7 +38,6 @@ app = Flask(__name__)
 CORS(app)
 
 # Load models
-yolo_model = YOLO('models/best.pt')
 densenet_model = tensorflow.keras.models.load_model('models/DenseNet121_epoch_30.keras')
 
 
@@ -106,15 +103,6 @@ def create_zip_from_images(images):
     return zip_buffer
 
 
-@app.route('/yolo_predict', methods=['POST'])
-def yolo_predict():
-    img = load_image_from_request(request.files['image'])
-    results = yolo_model.predict(img, imgsz=640)
-    img_with_boxes = Image.fromarray(results[0].plot())  # Convert result to PIL Image
-    img_buffer = save_image_to_memory(img_with_boxes)
-
-    return send_file(img_buffer, mimetype='image/jpeg')
-
 
 @app.route('/densenet_predict', methods=['POST'])
 def densenet_predict():
@@ -130,21 +118,6 @@ def densenet_predict():
         as_attachment=True,
         download_name='grad_cam_images.zip'
     )
-@app.route('/v2/yolo_predict', methods=['POST'])
-def yolo_predict_v2():
-    """
-    New YOLO prediction API that uploads processed image to Cloudinary.
-    """
-    base64_str = request.json.get('image')  # Get Base64 string from JSON body
-    img = load_image_from_base64(base64_str)
-
-    results = yolo_model.predict(img, imgsz=640)
-    img_with_boxes = Image.fromarray(results[0].plot())  # Convert result to PIL Image
-
-    # Upload image to Cloudinary and return URL
-    image_url = upload_image_to_cloudinary(img_with_boxes)
-
-    return jsonify({"image_url": image_url})
 
 
 @app.route('/v2/densenet_predict', methods=['POST'])
