@@ -34,3 +34,6 @@ htmlcov/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# xray-server
+.xray-server/.gitignore
