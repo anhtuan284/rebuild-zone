@@ -6,9 +6,9 @@
 <a href="https://redis.io/"><img src="https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white" alt="redis" > </a>
 <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="docker" > </a>
 
-# SafeZone
+# RebuildZone
 
-SafeZone được xây dụng với mục tiêu là phát triển một hệ thống cứu trợ khẩn cấp, hỗ trợ nhân đạo trong những thời điểm thiên tai (lũ lụt, sạt lở,..) và đại dịch. Đặc biệt là tại Việt Nam sau khi trải qua đại dịch COVID và bão YAGI.
+RebuildZone được xây dụng với mục tiêu là phát triển một hệ thống cứu trợ khẩn cấp, hỗ trợ nhân đạo trong những thời điểm thiên tai (lũ lụt, sạt lở,..) và đại dịch. Đặc biệt là tại Việt Nam sau khi trải qua đại dịch COVID và bão YAGI.
 
 Dự án được thực hiện trong cuộc thi [Phần Mềm Nguồn Mở-Olympic Tin học Sinh viên Việt Nam 2024](https://www.olp.vn/procon-pmmn/ph%E1%BA%A7n-m%E1%BB%81m-ngu%E1%BB%93n-m%E1%BB%9F). Được được open source theo giấy phép [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) bởi đội tác giả _Lazy Sunday Morning (LSM)_.
 
