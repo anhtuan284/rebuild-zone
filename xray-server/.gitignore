@@ -144,12 +144,20 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
-
 # mypy
-.mypy_cache/
+.mypy_Latency                       134ms
+ngrok                                                                                            (Ctrl+C to quit)
+
+👋 Goodbye tunnels, hello Agent Endpoints: https://ngrok.com/r/aep
+
+Session Status                online
+Account                       2151010421tuan@ou.edu.vn (Plan: Free)
+Version                       3.18.4
+Region                        Asia Pacific (ap)        cache/
 .dmypy.json
 dmypy.json
+/site
+
 
 # Pyre type checker
 .pyre/
@@ -157,7 +165,10 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
-# Cython debug symbols
+# Cython debug s
+Latency                       178ms
+ngrok                                (Ctrl+C to quit)
+                          s
 cython_debug/
 
 # PyCharm
@@ -166,3 +177,5 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+Latency                       178ms
+ngrok                                (Ctrl+C to quit)
